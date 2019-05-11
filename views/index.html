@@ -13,25 +13,45 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
-    <div class="container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-    </div>
-
-    <style>
+  <div class="container">
+        <div class="photo">
+            <img src="../images/amy-shamblen-651683-unsplash.jpg">
+        </div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+          <p>Lorem ipsum d</p>
+        </div>
+</div>
+    
+      <style>
         .container {
-            display: grid;
+          display: grid;
+          width: 100vw;
+          max-width: 100%;
+          max-height: 100%;
+          height: 100vh;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas: 
+          "image content"
+          "image content"
+          "image content"
         }
-    </style>
+
+
+        .photo {
+            grid-area: image;
+        }
+        .photo > img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        .text {
+            grid-area: content;
+        }
+      </style>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
