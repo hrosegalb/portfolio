@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Link to CSS file -->
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/stylesheet.css">
 
     <title>Hello, world!</title>
   </head>
@@ -18,12 +18,21 @@
             <img src="../images/amy-shamblen-651683-unsplash.jpg">
         </div>
         <div class="text">
+          <p id="name">Hannah Galbraith</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
           <p>Lorem ipsum d</p>
         </div>
 </div>
     
       <style>
+          @font-face {
+            font-family: 'metriaregular';
+            src: url('../styles/fonts/metria.woff2') format('woff2'),
+                 url('../styles/fonts/metria.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
         .container {
           display: grid;
           width: 100vw;
@@ -49,7 +58,19 @@
         }
 
         .text {
+             /* We center the contents of these items. You can also do this with flexbox too! */
             grid-area: content;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+        }
+
+        #name {
+            grid-area: content;
+            justify-content: center;
+            align-items: center;
+            font-family: 'metriaregular';
+            font-size: 8rem;
         }
       </style>
 
