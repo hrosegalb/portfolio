@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+    <!-- Import the Cambo font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cambo" rel="stylesheet">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +15,7 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="../styles/stylesheet.css">
 
-    <title>Hello, world!</title>
+    <title>Hannah Galbraith</title>
   </head>
   <div class="container">
         <div class="photo">
@@ -19,60 +23,14 @@
         </div>
         <div class="text">
           <p id="name">Hannah Galbraith</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
-          <p>Lorem ipsum d</p>
+          <p id="about-me-title">About Me</p>
+          <p id="about-me-text">I'm a graduate student getting an M.S. in Computer Science at Portland State University. Currently,
+             I'm also a software development intern at Jama Software. I have an interest in AI and Machine Learning, particularly deep 
+             learning and generative models. My hobbies include reading, writing, traveling, cooking, and exploring Portland. 
+             Check out some of my work <a href="repos.html">here.</a>
+          </p>
         </div>
-</div>
-    
-      <style>
-          @font-face {
-            font-family: 'metriaregular';
-            src: url('../styles/fonts/metria.woff2') format('woff2'),
-                 url('../styles/fonts/metria.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-
-        }
-        .container {
-          display: grid;
-          width: 100vw;
-          max-width: 100%;
-          max-height: 100%;
-          height: 100vh;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-areas: 
-          "image content"
-          "image content"
-          "image content"
-        }
-
-
-        .photo {
-            grid-area: image;
-        }
-        .photo > img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            max-height: 100%;
-        }
-
-        .text {
-             /* We center the contents of these items. You can also do this with flexbox too! */
-            grid-area: content;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px;
-        }
-
-        #name {
-            grid-area: content;
-            justify-content: center;
-            align-items: center;
-            font-family: 'metriaregular';
-            font-size: 8rem;
-        }
-      </style>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
