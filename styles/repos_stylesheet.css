@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'metriaregular';
+    src: url('../styles/fonts/metria.woff2') format('woff2'),
+    url('../styles/fonts/metria.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#my-work {
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'metriaregular';
+    font-size: 8rem;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Much of the following css was based on an example obtained from https://www.youtube.com/watch?v=W0ubfqwd4G4 */
+.text-blurred-bg {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    position: relative;
+    height: 300px;
+    transition: 0.3s;
+}
+
+.text-blurred-bg:hover img {
+    filter: blur(2px) brightness(65%);
+}
+
+.text-blurred-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-blurred-bg :not(img) {
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    font-family: "lobster", cursive;
+    color: white;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.text-blurred-bg:hover :not(img) {
+    opacity: 1;
+}
+
+.text-blurred-bg a {
+    font-family: "cambo", serif;
+    top: 60%;
+}
