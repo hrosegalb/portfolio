@@ -1,7 +1,7 @@
 # portfolio
 
 PLEASE USE THE CHROME BROWSER TO VIEW THIS APPLICATION. SITE DOES NOT RENDER CORRECTLY IN FIREFOX OR SAFARI.
-URL: https://safe-plains-89035.herokuapp.com/
+URL: https://safe-plains-89035.herokuapp.com/ (NOTE: This site is currently under maintenance)
 
 This portfolio was created as part of a project for my CS565 Full Stack Web Development class. 
 
