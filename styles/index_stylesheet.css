@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: #b8b8b8;
+  background: gray;
 }
 
 header::after {
