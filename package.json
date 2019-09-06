@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio of my projects, built from scratch by me!",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrosegalb/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Hannah Galbraith",
+  "license": "MIT",
+  "engines": {
+    "node": "10.15"
+  },
+  "bugs": {
+    "url": "https://github.com/hrosegalb/portfolio/issues"
+  },
+  "homepage": "https://github.com/hrosegalb/portfolio"
+}

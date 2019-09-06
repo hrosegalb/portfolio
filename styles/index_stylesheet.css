@@ -1,69 +1,76 @@
-@font-face {
-  font-family: 'metriaregular';
-  src: url('../styles/fonts/metria.woff2') format('woff2'),
-       url('../styles/fonts/metria.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+/* Navbar created using tutorial by Kevin Powell: https://www.youtube.com/watch?v=FEmysQARWFU */
 
+body {
+  margin: 0;
+  background: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 .container {
-  display: grid;
-  width: 100vw;
-  max-width: 100%;
-  max-height: 100%;
-  height: 100vh;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: 
-    "image content"
-    "image content"
-    "image content"
+  width: 80%;
+  margin: 0 auto;
 }
 
-.photo {
-  grid-area: image;
+header {
+  background: #b8b8b8;
 }
 
-.photo > img {
-  object-fit: cover;
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  font-family: 'Major Mono Display', monospace;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 30px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #1e1e1e;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #1e1e1e;
+
+  position: absolute;
+  width: 0%;
+  top: 0;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
   width: 100%;
-  height: 100%;
-  max-height: 100%;
-}
-
-.text {
-  grid-area: content;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-}
-
-#name {
-  grid-area: content;
-  justify-content: center;
-  align-items: center;
-  font-family: 'metriaregular';
-  font-size: 8rem;
-}
-
-#about-me-title {
-  grid-area: content;
-  justify-content: center;
-  align-items: center;
-  font-family: 'metriaregular';
-  font-size: 3rem;
-  text-decoration: underline;
-  margin-left: 7px;
-}
-
-a {
-  font-family: 'metriaregular';
-  font-size: 1.15rem;
-  color: black;
-}
-
-#about-me-text {
-  margin-left: 7px;
-  font-size: 1.15rem;
-  font-family: 'Cambo', serif;            
 }
