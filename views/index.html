@@ -6,10 +6,12 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Cambo" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"> 
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="../styles/index_stylesheet.css">
@@ -17,20 +19,25 @@
   <title>Hannah Galbraith</title>
   </head>
   <body>
-    <header>
-        <div class="container">
-          <a href="/" class="logo">
-              <h1 class="logo">hANNAh GAlBRAith</h1>
-          </a>
-
-          <nav>
-            <ul>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Resume</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+    <nav>
+      <div class="logo">
+        <h1>HRG</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="background-img"></div>
+    </div>
 
     <!-- <div class="container">
         <div class="photo">
@@ -47,4 +54,32 @@
       </div>
   </div> -->
   </body>
+
+  <script>
+    /* Used to slide the menu items in the navigation burger. Obtained from
+    the following tutorial: https://www.youtube.com/watch?v=gXkqy0b4M5g */
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', () => {
+            /* Toggle nav */
+            nav.classList.toggle('nav-active');
+
+            /* Animate links */
+            navLinks.forEach((link, index) => {
+              if (link.style.animation) {
+                link.style.animation = '';
+              } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+              }
+            });
+
+            /* Burger animation */
+            burger.classList.toggle('toggle');
+        });
+      }
+    navSlide();
+  </script>
 </html>
