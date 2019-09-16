@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
-      
+
+    <!-- Import fonts from Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cambo" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Import the Cambo and Lobster fonts from Google Fonts -->
-
+    <!-- Link to Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/3c56ce0076.js"></script>
 
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="../styles/projects_stylesheet.css">
@@ -15,6 +24,69 @@
     <title>My Projects</title>
   </head>
   <body>
-    <h1>Hi</h1>
+      <!-- navbar
+  =========================================================================== -->
+  <nav>
+      <div class="logo">
+        <a href="/">HRG</a>  
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+      <!-- footer
+  =========================================================================== -->
+  <section>
+      <footer>
+        <!-- <div class="credit">
+          <p>2019 Hannah Galbraith</p>
+        </div> -->
+        <div class="social">
+          <ul class="icons">
+            <a href="https://github.com/hrosegalb"><li><i class="fab fa-github fa-lg"></i></a></li>
+            <a href="https://www.linkedin.com/in/hannah-galbraith/"><li><i class="fab fa-linkedin-in fa-lg"></i></li></a>
+            <a href="https://twitter.com/hrosegalb"><li><i class="fab fa-twitter fa-lg"></i></li></a>
+          </ul>
+        </div>
+      </footer>
+  </section>
+
   </body>
+
+  <script>
+      /* Used to slide the menu items in the navigation burger. Obtained from
+      the following tutorial: https://www.youtube.com/watch?v=gXkqy0b4M5g */
+      const navSlide = () => {
+          const burger = document.querySelector('.burger');
+          const nav = document.querySelector('.nav-links');
+          const navLinks = document.querySelectorAll('.nav-links li');
+  
+          burger.addEventListener('click', () => {
+              /* Toggle nav */
+              nav.classList.toggle('nav-active');
+  
+              /* Animate links */
+              navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                  link.style.animation = '';
+                } else {
+                  link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+                }
+              });
+  
+              /* Burger animation */
+              burger.classList.toggle('toggle');
+          });
+        }
+      navSlide();
+  </script>
 </html>
